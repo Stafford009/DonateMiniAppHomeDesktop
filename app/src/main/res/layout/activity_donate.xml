@@ -97,7 +97,7 @@
         android:id="@+id/AmountText"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="24dp"
         android:layout_marginBottom="92dp"
         android:text="Amount"
         android:textAlignment="center"
@@ -131,7 +131,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/CheckImage"
         android:layout_width="360dp"
         android:layout_height="163dp"
         android:layout_marginTop="280dp"
@@ -142,12 +142,28 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/check_image" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
+    <NumberPicker
+        android:id="@+id/NumberPicker"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="#FBD350"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="554dp" />
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.255" />
+
+    <ProgressBar
+        android:id="@+id/DonationProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="360dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="152dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CheckImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

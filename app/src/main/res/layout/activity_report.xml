@@ -17,14 +17,13 @@
         android:textAllCaps="false"
         android:textColor="#FBD350"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="1dp" />
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="409dp"
-        android:layout_height="672dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="671dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="59dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
