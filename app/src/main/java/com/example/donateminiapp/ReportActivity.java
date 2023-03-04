@@ -2,20 +2,29 @@ package com.example.donateminiapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ReportActivity extends AppCompatActivity {
+
+    private TextView mReportText;
+    private RecyclerView mRecycler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
+
+        mReportText = findViewById(R.id.ReportText);
+        mRecycler = findViewById(R.id.Recycler);
+
     }
 
     @Override
