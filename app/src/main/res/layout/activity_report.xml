@@ -6,4 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ReportActivity">
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <ListView
+        android:layout_width="409dp"
+        android:layout_height="672dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="58dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
