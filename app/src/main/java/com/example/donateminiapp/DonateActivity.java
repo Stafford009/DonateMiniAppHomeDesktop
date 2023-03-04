@@ -12,6 +12,7 @@ import android.widget.NumberPicker;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -31,7 +32,7 @@ public class DonateActivity extends AppCompatActivity {
     private ProgressBar mDonationProgress;
     private NumberPicker mNumberPicker;
     private int TotalDonated = 0;
-    private boolean TargetReached = false;
+    private boolean GoalAchieved = false;
 
 
 
@@ -56,14 +57,45 @@ public class DonateActivity extends AppCompatActivity {
         mNumberPicker.setMinValue(0);
         mNumberPicker.setMaxValue(1000);
         mDonationProgress.setMax(10000);
-        mShownTotal.setText("Php.0");
+        mShownTotal.setText("0");
 
 
         mDonateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+
+                int DonatedAmount = mNumberPicker.getValue();
+
+                if (DonatedAmount == 0){
+                    String text = mPaymentAmount.getText().toString();
+                    if (!text.equals(""))
+                        DonatedAmount = Integer.parseInt(text);
+
+                }
+                if (!GoalAchieved){
+                    TotalDonated = TotalDonated + DonatedAmount;
+                    mDonationProgress.setProgress(TotalDonated);
+                    GoalAchieved = TotalDonated >= 10000;
+                    String totalDonated = "$" + TotalDonated;
+                    mShownTotal.setText(totalDonated);
+                    Toast tmsg1 = Toast.makeText(getApplicationContext(), "Thank You For The Donation",
+                            Toast.LENGTH_SHORT);
+                    tmsg1.show();
+                }
+                if (GoalAchieved) {
+                    TotalDonated = TotalDonated + DonatedAmount;
+                    mDonationProgress.setProgress(TotalDonated);
+                    String totalDonated = "$" + TotalDonated;
+                    mShownTotal.setText(totalDonated);
+                    Toast tmsg2 = Toast.makeText(getApplicationContext(), "Goal Achieved/Exceeded!",
+                            Toast.LENGTH_SHORT);
+                    tmsg2.show();
+
+                }
             }
         });
+
+
     }
 }

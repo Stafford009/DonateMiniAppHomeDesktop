@@ -112,7 +112,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="28dp"
         android:layout_marginBottom="36dp"
-        android:text="Total So Far"
+        android:text="Total So Far:"
         android:textColor="#FBD350"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ShownTotal"
@@ -125,7 +125,6 @@
         android:layout_height="30dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="36dp"
-        android:text="$ Total"
         android:textColor="#FBD350"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
