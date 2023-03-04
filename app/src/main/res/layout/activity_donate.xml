@@ -150,12 +150,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="554dp" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="245dp"
-        android:layout_height="82dp"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="160dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
