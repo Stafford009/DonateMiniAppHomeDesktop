@@ -4,19 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#9E1B33"
     tools:context=".ReportActivity">
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="184dp"
-        tools:layout_editor_absoluteY="38dp" />
+        android:id="@+id/ReportText"
+        android:layout_width="409dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:text="Donation Report"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FBD350"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp" />
 
     <ListView
         android:layout_width="409dp"
         android:layout_height="672dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="58dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
